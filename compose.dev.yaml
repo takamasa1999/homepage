@@ -1,0 +1,11 @@
+# https://hub.docker.com/_/nginx
+services:
+  web:
+    image: nginx:1.29.0
+    volumes:
+      - ./templates:/etc/nginx/templates
+      - ./public:/home
+    ports:
+      - "80:80"
+    environment:
+      - NGINX_PORT=80
