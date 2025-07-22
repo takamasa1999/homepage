@@ -1,0 +1,13 @@
+body {
+    font-family: 'Bitcount Grid Single', serif;
+}
+
+b {
+    font-family: "Bitcount Grid Double", serif;
+}
+
+/* Bug fix for button text alignment. It might be a name conflict with Milligram, but not 100% sure. */
+.swal-button {
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STT Cloud</title>
+    <!-- Custom Styles Start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
+        integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="css/stt-cloud.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <!-- Custom Styles End -->
+    <!-- Google Fonts Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Google Fonts End -->
+    <!-- Custom Scripts Start -->
+    <script src="https://cdn.jsdelivr.net/npm/randomcolor@0.6.2/randomColor.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <!-- Custom Scripts End -->
+</head>
+
+<body>
+    <main>
+        <div class="top-bar">
+            <div class="top-bar-inner">
+                <h1 class="rainbow">STT Cloud</h1>
+            </div>
+            <div class="top-bar-inner">
+                <a href="/stt-cloud/about.html">What's this?</a>
+            </div>
+        </div>
+        <h6 class="timezone">Showing time in: <span id="timezone"></span></h6>
+        <div id="stt-table" class="container">
+        </div>
+        <div id="table-bottom"></div>
+    </main>
+
+    <div class="floating-bottom">
+        <div class="floating-bottom-inner">
+            <audio id="audio-player" controls></audio>
+        </div>
+        <div class="floating-bottom-inner">
+            <button class="button" id="record">Record</button>
+            <button class="button" id="stop" disabled>Stop</button>
+        </div>
+    </div>
+
+    <script src="/js/rainbow.js"></script>
+    <script src="js/audio-recorder.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/get-timezone.js"></script>
+    <script src="js/main-window-resize.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+</body>
+
+</html>
