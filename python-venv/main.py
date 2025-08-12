@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, Query
 import psycopg
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.concurrency import run_in_threadpool
@@ -26,8 +26,11 @@ async def root():
     return {"message": "Here's the root of Repainter API."}
 
 @app.post("/transcribe/")
-async def transcribe(file: UploadFile = File(...)):
-    result = await run_in_threadpool(process_transcription, file)
+async def transcribe(
+    file: UploadFile = File(...),
+    lang: str = Query("auto", description="Transcription language (leave empty for auto)")
+):
+    result = await run_in_threadpool(process_transcription, file, lang)
     return result
 
 DSN = "dbname=postgres user=ubuntu"

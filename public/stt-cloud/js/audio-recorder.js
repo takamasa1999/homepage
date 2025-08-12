@@ -41,11 +41,9 @@ if (navigator.mediaDevices) {
         swal(
           "Success!",
           "Your audio has been submitted and is now being transcribed. Check back later for the result. ⏳",
-          "success"
+          "success",
         );
-        transcribeAudio(blob).then((text) => {
-        })
-
+        transcribeAudio(blob).then((text) => {});
       };
 
       mediaRecorder.ondataavailable = (e) => {
@@ -54,17 +52,20 @@ if (navigator.mediaDevices) {
     })
     .catch((err) => {
       console.error(`The following error occurred: ${err}`);
-      swal("Oops", "Something went wrong!", "error")
+      swal("Oops", "Something went wrong!", "error");
     });
 }
 
 async function transcribeAudio(audioBlob) {
-  const formData = new FormData()
-  formData.append("file", audioBlob, "audio.webm")
-  const response = await fetch("https://api.repainter.net/transcribe/", {
+  const language = document.getElementById("language-selector").value;
+  const url = new URL("https://api.repainter.net/transcribe/");
+  url.searchParams.set("lang", language);
+  const formData = new FormData();
+  formData.append("file", audioBlob, "audio.webm");
+  const response = await fetch(url, {
     method: "POST",
-    body: formData
-  })
-  const json = await response.json()
-  return json.text
+    body: formData,
+  });
+  const json = await response.json();
+  return json.text;
 }

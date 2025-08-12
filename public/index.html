@@ -1,68 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Repainter's homepage'</title>
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" />
     <!-- Custom Styles Start -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
-        integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
+      integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Custom Styles End -->
     <!-- Google Fonts Start -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Google Fonts End -->
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/home.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/home.css" rel="stylesheet" />
     <!-- Custom Scripts Start -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/randomcolor@0.6.2/randomColor.min.js"></script>
     <!-- Custom Scripts End -->
-</head>
+  </head>
 
-<body>
-    <h1 class="rainbow">Repainter's homepage</h1>
-    <div class="container">
+  <body>
+    <main class="container">
+      <h1 class="rainbow">Repainter's homepage</h1>
+      <div class="container">
         <div class="row">
-            <div class="column-20">
-                <model-viewer
-                    alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-                    src="src/r-3d.glb" shadow-intensity="1" camera-controls touch-action="pan-y"
-                    camera-orbit="-5deg 100deg" poster="src/r-3d.webp"></model-viewer>
-            </div>
-            <div class="column-80">
-                <p>
-                    Welcome to my main webpage. Here, I'll share my footage and content filled with fresh ideas.<br />
-                    This is the link where you can check the summary of my latest work -> 🔗 <a
-                        href="https://linktr.ee/repainter">LINK</a><br />
-                    By the way, <b>the color of the title above is randomly generated</b>.
-                    Hit refresh to see a new set of colors!<br />
-                    <b>The big R logo is movable</b>, so you can rotate it to see the 3D model from different angles.
-                    Wait until the load ends; the loading bar above the image will disappear once it's ready.
-                </p>
-                <p>
-                    I don't collect any data from you, and I don't use cookies on this site.<br />
-                    *You can check the source code of this webpage on <a
-                        href="https://github.com/takamasa1999/homepage">GitHub</a>.
-                </p>
-                <p>
-                    <b>Fresh update:</b> A new text-to-speech communication space is now available → 🔗 <a
-                        href="/stt-cloud">STT Cloud</a><br />
-                    Feel free to explore the app from this early stage! Documentation is still in progress 👨‍💻
-                </p>
-            </div>
+          <div class="column-20">
+            <model-viewer
+              alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+              src="src/r-3d.glb"
+              shadow-intensity="1"
+              camera-controls
+              touch-action="pan-y"
+              camera-orbit="-5deg 100deg"
+              poster="src/r-3d.webp"
+            ></model-viewer>
+          </div>
+          <div class="column-80">
+            <p>
+              Welcome to my main webpage. Here, I'll share my footage and
+              content filled with fresh ideas.<br />
+              This is the link where you can check the summary of my latest work
+              -&#62; 🔗 <a href="https://linktr.ee/repainter">LINK</a><br />
+              By the way,
+              <b>the color of the title above is randomly generated</b>. Hit
+              refresh to see a new set of colors!<br />
+              <b>The big R logo is movable</b>, so you can rotate it to see the
+              3D model from different angles. Wait until the load ends; the
+              loading bar above the image will disappear once it's ready.
+            </p>
+            <p>
+              I don't collect any data from you, and I don't use cookies on this
+              site.<br />
+              *You can check the source code of this webpage on
+              <a href="https://github.com/takamasa1999/homepage">GitHub</a>.
+            </p>
+            <p>
+              <b>Fresh update:</b> A new text-to-speech communication space is
+              now available → 🔗 <a href="/stt-cloud">STT Cloud</a><br />
+              Feel free to explore the app from this early stage! Documentation
+              is still in progress 👨‍💻
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
+    </main>
     <div id="particles-js"></div>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/rainbow.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
+
