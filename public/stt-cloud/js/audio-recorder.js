@@ -52,7 +52,11 @@ if (navigator.mediaDevices) {
     })
     .catch((err) => {
       console.error(`The following error occurred: ${err}`);
-      swal("Oops", "Something went wrong!", "error");
+      swal(
+        "Oops something went wrong!",
+        "Enable microphone permission in Site settings and retry.",
+        "error",
+      );
     });
 }
 
