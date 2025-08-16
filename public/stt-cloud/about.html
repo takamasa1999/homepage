@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STT Cloud (About)</title>
-    <!-- Custom Styles Start -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="meta.title">STT Cloud (About)</title>
+
+    <!-- Styles start -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
@@ -12,57 +13,94 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="/css/main.css" rel="stylesheet" />
-    <!-- Custom Styles End -->
-    <!-- Google Fonts Start -->
+    <link href="/css/main.css?rv=0.1" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/nerdfonts-web@1.0.1/nf.min.css"
+    />
+    <!-- Styles end -->
+
+    <!-- Fonts start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&display=swap"
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Roboto+Slab"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Grid+Single:wght@100..900&family=Yuji+Boku&display=swap"
       rel="stylesheet"
     />
-    <!-- Google Fonts End -->
-    <!-- Custom Scripts Start -->
+    <!-- Fonts end -->
+    <!-- Scripts  start -->
+    <script src="https://unpkg.com/i18next@25.3.4/dist/umd/i18next.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/randomcolor@0.6.2/randomColor.min.js"></script>
-    <!-- Custom Scripts End -->
+    <script src="/js/rainbow.js?rv=0.1"></script>
+    <script src="js/i18next-resources.js?rv=0.1"></script>
+    <!-- Scripts end -->
   </head>
 
-  <body class="container">
-    <h1 class="rainbow">About STT Cloud</h1>
-    <p>
-      Welcome to STT cloud! You would be wondering...what is this? Well, this is
-      like a bulletin board but you can post what you only say. Yes, some of you
-      guys have already noticed, SST means Speach To Text.<br />
-    </p>
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="column">
+          <h1 class="rainbow" data-i18n="about.heading">About STT Cloud</h1>
 
-    <p>Here's a list of the features of this "bulletin board"</p>
-    <ul>
-      <li>
-        "The audio data will be transcribed and then once it's ready it'll be
-        shown on the board."
-      </li>
-      <li>
-        "There's no user name, no thread name, of cource no password too."
-      </li>
-      <li>
-        "You can post whatever you want but be carefull
-        <b>not to post anything credential</b>"
-      </li>
-      <li>
-        "Any language is welcome to use, thanks to the modern STT language
-        model, <a href="https://github.com/openai/whisper">Whisper</a> "
-      </li>
-        </ul>
+          <p>
+            <a onclick="changeLanguage('en')" style="margin-right: 1em">
+              🇺🇸 English
+            </a>
+            <a onclick="changeLanguage('ja')">🇯🇵 日本語</a>
+          </p>
 
-    <div>
-      <a href="/stt-cloud/">Back to STT Cloud</a>
-    </div>
-    <div>
-      <a href="/">Back to Home</a>
-    </div>
-    <div>
-      <a href="/stt-cloud/">Back to STT Cloud</a>
-    </div>
-    <script src="/js/rainbow.js"></script>
+          <p data-i18n="about.pIntro">Welcome to STT Cloud! ...</p>
+
+          <p data-i18n="about.featuresTitle">
+            Here’s what this voice-powered bulletin board can do:
+          </p>
+          <ul>
+            <li data-i18n="about.feature1">
+              Your audio will be transcribed...
+            </li>
+            <li data-i18n="about.feature2">No usernames, no thread names...</li>
+            <li data-i18n="about.feature3">Say whatever you want, but...</li>
+            <li data-i18n="about.feature4">
+              Any language is welcome! Thanks to Whisper...
+            </li>
+          </ul>
+
+          <p data-i18n="about.pIdea">
+            This is a completely experimental project — just me bringing a small
+            idea to life:
+            <b>
+              What if there was a bulletin board where people could post only by
+              speaking?
+            </b>
+          </p>
+
+          <p data-i18n="about.pEnjoy">
+            Enjoy this little sandbox! The future of this platform is in your
+            hands.
+          </p>
+
+          <p data-i18n="about.pNote">
+            <b>Note:</b> This app is running on a low-spec server...
+          </p>
+
+          <div>
+            <i class="nf nf-mdi-text_to_speech"></i>
+            <a href="/stt-cloud/" data-i18n="about.backStt"
+              >Back to STT Cloud</a
+            >
+          </div>
+          <div>
+            <i class="nf nf-mdi-home"></i>
+            <a href="/" data-i18n="about.backHome">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/i18next-init.js?rv=0.1"></script>
   </body>
 </html>

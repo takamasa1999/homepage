@@ -1,9 +1,9 @@
 body {
-  font-family: "Bitcount Grid Single", "Yuji Boku", serif;
+  font-family: "Bitcount Grid Single", "Yuji Boku", "Roboto Slab", serif;
 }
 
 b {
-  font-family: "Bitcount Grid Double", serif;
+  font-family: "Bitcount Grid Double", "Yuji Boku", "Roboto Slab", serif;
 }
 
 /* Bug fix for button text alignment. It might be a name conflict with Milligram, but not 100% sure. */
