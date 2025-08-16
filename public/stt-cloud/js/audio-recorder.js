@@ -73,3 +73,102 @@ async function transcribeAudio(audioBlob) {
   const json = await response.json();
   return json.text;
 }
+
+// const record = document.getElementById("record");
+// const stop = document.getElementById("stop");
+//
+// let mediaRecorder = null;
+// let stream = null;
+// let chunks = [];
+//
+// if (navigator.mediaDevices?.getUserMedia) {
+//   console.log("getUserMedia supported.");
+//
+//   // ↓ 録音ボタンクリック時にだけ許可を要求
+//   record.onclick = async () => {
+//     try {
+//       // ユーザー操作直後に呼ぶ（iOS/Safari対策）
+//       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+//
+//       // 可能なら適切な MIME を選択（未対応環境では空でOK）
+//       const mime = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
+//         ? "audio/webm;codecs=opus"
+//         : MediaRecorder.isTypeSupported("audio/mp4")
+//           ? "audio/mp4"
+//           : "";
+//
+//       mediaRecorder = new MediaRecorder(stream, mime ? { mimeType: mime } : {});
+//       chunks = [];
+//
+//       mediaRecorder.ondataavailable = (e) => {
+//         if (e.data && e.data.size) chunks.push(e.data);
+//       };
+//
+//       mediaRecorder.onstop = async () => {
+//         record.disabled = false;
+//         stop.disabled = true;
+//         record.style.background = "";
+//         record.style.color = "";
+//
+//         // マイクを確実にOFF
+//         try {
+//           stream.getTracks().forEach((t) => t.stop());
+//         } catch {}
+//
+//         // 元コードの挙動を維持
+//         const audioPlayer = document.getElementById("audio-player");
+//         const blob = new Blob(chunks, { type: mime || "audio/webm" });
+//         chunks = [];
+//         const audioURL = URL.createObjectURL(blob);
+//         audioPlayer.src = audioURL;
+//
+//         swal(
+//           "Success!",
+//           "Your audio has been submitted and is now being transcribed. Check back later for the result. ⏳",
+//           "success",
+//         );
+//
+//         // 送信（エラー処理はお好みで）
+//         try {
+//           await transcribeAudio(blob);
+//         } catch (e) {
+//           console.error(e);
+//         }
+//       };
+//
+//       // UI更新 & 録音開始（元コード準拠）
+//       mediaRecorder.start();
+//       console.log(mediaRecorder.state);
+//       console.log("recorder started");
+//       record.style.background = "red";
+//       record.style.color = "black";
+//       record.disabled = true;
+//       stop.disabled = false;
+//     } catch (err) {
+//       console.error(`The following error occurred: ${err?.name || err}`);
+//       // ここはあなたが選んだ短文に合わせています
+//       swal(
+//         "Oops something went wrong!",
+//         "Enable microphone permission in Site settings and retry.",
+//         "error",
+//       );
+//     }
+//   };
+//
+//   stop.onclick = () => {
+//     if (mediaRecorder && mediaRecorder.state === "recording") {
+//       mediaRecorder.stop();
+//       console.log(mediaRecorder.state);
+//       console.log("recorder stopped");
+//     }
+//   };
+//
+//   // ページ離脱時のクリーンアップ（任意）
+//   window.addEventListener("beforeunload", () => {
+//     try {
+//       stream?.getTracks().forEach((t) => t.stop());
+//     } catch {}
+//   });
+// } else {
+//   console.log("getUserMedia not supported.");
+// }
