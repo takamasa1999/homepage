@@ -22,11 +22,13 @@ Since I use a fairly cheap VPS to host the site, I try to keep everything as min
 
 ### Production server
 
-OS: Ubuntu 24.04.2 LTS x86_64  
-CPU: Intel Xeon E312xx (Sandy Bridge) (2) @ 2.20 GHz  
-GPU: Cirrus Logic GD 5446  
-Memory: 1.51 GiB / 1.92 GiB (78%)  
-Disk (/): 9.90 GiB / 37.70 GiB (26%) - ext4
+Server spec upgraded on 23rd Sep 2025 🎉
+
+OS: Ubuntu 24.04.2 LTS x86_64
+CPU: Intel Xeon E312xx (Sandy Bridge) (4) @ 2.20 GHz
+GPU: Cirrus Logic GD 5446
+Memory: 3.82 GiB
+Disk (/): 76.45 GiB
 
 ## Frontend
 
